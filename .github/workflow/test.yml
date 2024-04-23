@@ -1,9 +1,9 @@
 name: Notify Microsoft 365
-on: [push] 
+on: [push]
 jobs:
   notify:
     runs-on: ubuntu-latest
     steps:
       - name: Send notification to Microsoft 365
         run: |
-          curl -H "Content-Type: application/json" -d "{ 'text': '새로운 커밋발생!!' }" ${{secrets.M365_WEBHOOK_URL}}
+          curl -H "Content-Type: application/json" -d "{ 'text': 'new push!!' }" ${{secrets.M365_WEBHOOK_URL}}
